@@ -1,3 +1,4 @@
+import { supabase } from "@/services/supabase-client";
 import { Link, router, useLocalSearchParams } from "expo-router";
 import { ArrowLeft, Check, Eye, EyeClosed, X } from "lucide-react-native";
 import React, { useState } from "react";
@@ -11,7 +12,6 @@ import {
 import { Toast } from "toastify-react-native";
 import Button from "../components/Button";
 import Input from "../components/Input";
-import { supabase } from "@/services/supabase-client";
 const Register = () => {
   const params = useLocalSearchParams<{ email?: string }>();
   const emailParam = Array.isArray(params.email)
